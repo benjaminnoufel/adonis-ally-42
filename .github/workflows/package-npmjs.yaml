@@ -47,5 +47,8 @@ jobs:
       - name: Build the project
         run: make build
 
+      - name: Clean repo
+        run: 'make clean'
+
       - name: Publish the package
         run: 'make publish-npmjs || true'
