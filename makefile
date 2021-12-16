@@ -5,7 +5,7 @@ ifeq (${CI},true)
     DOCKER_COMPOSE_RUN_OPTIONS=--rm --user root -T
 endif
 
-PACKAGE_VERSION=$(shell cat package.json | grep -i version | sed -e "s/ //g" | cut -c 12- | sed -e "s/\",//g")
+PACKAGE_VERSION=$(shell cat package.json | grep -i version | sed -e "s/ //g" | cut -c 12- | sed -e "s/\",//g" | head -n 1)
 
 test:
 	@docker-compose run $(DOCKER_COMPOSE_RUN_OPTIONS) yarn test
