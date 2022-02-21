@@ -182,13 +182,13 @@ export class FortyTwoDriver extends Oauth2Driver<FortyTwoAccessToken, FortyTwoSc
     const body = await request.get()
     return {
       id: body.id,
-      nickName: body.name,
+      nickName: body.usual_full_name,
       email: body.email, // May not always be there
       emailVerificationState: (body.email
         ? 'verified'
         : 'unsupported') as AllyUserContract<any>['emailVerificationState'],
-      name: body.name,
-      avatarUrl: body.avatar_url,
+      name: body.usual_full_name,
+      avatarUrl: body.image_url,
       original: body,
     }
   }
