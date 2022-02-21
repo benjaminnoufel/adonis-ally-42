@@ -1,6 +1,6 @@
 {
   "name": "@benjaminnoufel/adonis-ally-42",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A 42 driver of AdonisJS Ally",
   "main": "build/providers/index.js",
   "types": "build/src/FortyTwo/index.d.ts",
